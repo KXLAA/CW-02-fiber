@@ -1,0 +1,109 @@
+@mixin button-base{
+    font-weight: $font-weight-bold;
+    display: inline-block;
+    text-decoration:none;
+    border-radius: .3125rem;
+    padding: 1.125rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+@mixin full-width-button{
+    @include button-base;
+    display: block !important;;
+    width: 100% !important;
+}
+
+.button--main{
+    @include button-base;
+    background:$button-main-bg-color;
+    color:$button-main-color;
+
+    &:hover {
+        background:darken($button-main-bg-color, 8%);
+        transform: translateX(0rem) translateY(-0.3125rem);
+    }
+
+    &:active {
+        background:darken($button-main-bg-color, 25%);
+        transform: translateX(0rem) translateY(.125rem);
+    } 
+
+}
+
+.button--second{
+    @include button-base;
+    background-color:$button-second-bg-color;
+    color: $button-second-txt-color;
+
+    &:hover {
+        background:darken($button-second-bg-color, 8%);
+        transform: translateX(0rem) translateY(-0.3125rem);
+
+    }
+
+    &:active {
+        background:darken($button-second-bg-color, 25%);
+        transform: translateX(0rem) translateY(.125rem);
+
+    } 
+
+
+    @include respond-to(sm){
+        @include full-width-button;
+
+        &:hover {
+            background:darken($button-second-bg-color, 8%);
+            transform: translateX(0rem) translateY(-0.3125rem);
+
+        }
+    
+        &:active {
+            background:darken($button-second-bg-color, 25%);
+            transform: translateX(0rem) translateY(.125rem);
+
+        } 
+    }  
+
+}
+
+
+.button--third{
+    @include full-width-button;
+    background-color: $button-third-bg-color;
+    color: $button-third-txt-color;
+    border: solid $border-color .0625rem;
+
+    &:hover {
+        background:darken($button-third-bg-color, 8%);
+        transform: translateX(0rem) translateY(-0.3125rem);
+
+    }
+
+    &:active {
+        background:darken($button-third-bg-color, 25%);
+        transform: translateX(0rem) translateY(.125rem);
+
+    } 
+}
+
+
+.button--full-width{
+    @include full-width-button;
+}
+
+
+@mixin hover-states--main {
+    &:hover {
+        color:darken($button-main-bg-color, 8%);
+        transform: translateX(0rem) translateY(-0.3125rem);
+    }
+
+    &:active {
+        color:darken($button-main-bg-color, 25%);
+        transform: translateX(0rem) translateY(.125rem);
+    } 
+}
+
+// ===== Usage ===== //
+//@include hover-states--main;

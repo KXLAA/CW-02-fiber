@@ -1,0 +1,118 @@
+.nav{
+    &__container{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        @include flex-center;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        color: $logo-color;
+    }
+ 
+    &__main{
+        @include flex-center;
+        justify-content: space-between;
+
+
+        @include respond-to(md){
+            background-color: rgba(255, 255, 255, 0.97);
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100vh;
+            @include flex-center-column;
+            transition: all 0.5s ease-in;
+            font-size: 1.5rem;
+            opacity: 0;
+			pointer-events: none;
+            visibility: hidden;
+        }
+    }
+
+    &__links-col{
+        @include flex-center;
+        justify-content: space-between;
+        list-style: none;
+
+        @include respond-to(md){
+            @include flex-center-column;
+        }
+    }
+
+    &__link{
+        margin-left: 1.5rem;
+        transition: all 0.3s ease;
+        @include hover-states--main;
+
+        @include respond-to(md){
+            margin-left: 0rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link:nth-child(1){
+        margin-left: 0rem;
+    }
+
+
+    &__cta{
+        padding-left: 10rem;
+
+        @include respond-to(md){
+            @include flex-center-column;
+            padding-left: 0rem;
+        }
+    }
+
+
+    &__link--cta{
+        margin-right: 2.5rem;
+        color: $logo-color;
+        @include hover-states--main;
+
+        @include respond-to(md){
+            margin-right: 0rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+/*MOBILE NAV*/
+.mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+
+    @include respond-to(md){
+        display: block;
+    }
+
+    &__icon{
+        height: 3rem;
+        width: 3rem;
+        color:$mobile-nav-icon;
+    }
+
+    &__icon[name="close-sharp"]{
+        display: none;
+    }
+}
+
+.nav-open .nav__main {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.nav-open .mobile-nav__icon[name="close-sharp"] {
+    display: block;
+}
+
+.nav-open .mobile-nav__icon[name="menu-sharp"] {
+    display: none;
+}

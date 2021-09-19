@@ -1,0 +1,51 @@
+.reviews{
+    margin-bottom: 5rem;
+
+    &__container{
+        @include flex-center-vert;
+
+        @include respond-to(md){
+            @include flex-center-column;
+        }
+    }
+}
+
+.card{
+    border-radius: .625rem;
+    border: solid $border-color .0625rem;
+    margin-left: 1.5rem;
+    max-width: 30rem;
+    padding: 1.5rem 1.5rem;
+
+    @include respond-to(md){
+        margin-left: 0rem;
+        margin-bottom: 3rem;
+    }
+
+    &:nth-child(1){
+        margin-left: 0rem;
+    }
+
+    &__img-container{
+        @include flex-center-vert;
+        margin-bottom: 1rem;
+    }
+
+    &__txt{
+        margin-left: 1rem;
+    }
+
+    &__user-name,
+    &__user-sub {
+        font-size: .9375rem;
+    }
+
+    &__description{
+        margin-bottom: 2rem;
+        font-size: $font-size-base;
+    }
+
+}
+
+
+

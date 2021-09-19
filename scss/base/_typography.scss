@@ -1,0 +1,142 @@
+/// **** HEADINGS FONT STYLES **** ///
+
+$heading-fs: (
+  h1: $h1-font-size, //  56px
+  h2: $h2-font-size, //  36px
+  h3: $h3-font-size, //  20px
+)!default;
+
+$heading-line-height: (
+  h1-lh: $h1-line-height, //  72px
+  h2-lh: $h2-line-height, //  40px
+  h3-lh: $h3-line-height, //  24px
+)!default;
+
+
+@mixin heading-base{
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-bold;
+    color: $heading-color; 
+}
+
+@mixin heading($style) {
+    @if $style == "main" {
+        @include heading-base;
+        font-size: map-get($heading-fs, h1);
+        line-height: map-get($heading-line-height, h1-lh);
+    }
+
+    @else if $style == "second" {
+        @include heading-base;
+        font-size: map-get($heading-fs, h2);
+        line-height: map-get($heading-line-height, h2-lh);
+
+    }
+
+    @else if $style == "second--white" {
+      @include heading-base;
+      font-size: map-get($heading-fs, h2);
+      line-height: map-get($heading-line-height, h2-lh);
+      color: $heading-color--white;
+
+  }
+
+    @else if $style == "third" {
+    @include heading-base;
+    font-size: map-get($heading-fs, h3);
+    line-height: map-get($heading-line-height, h3-lh);
+  }
+}
+
+// ===== Usage ===== //
+
+.heading--main{
+  @include heading(main);
+  color: $heading-color
+}
+
+.heading--second{
+  @include heading(second);
+  color: $heading-color
+}
+
+.heading--second-white{
+  @include heading(second--white);
+  color: $heading-color--white;
+}
+
+.heading--third{
+  @include heading(third);
+  color: $heading-color
+}
+
+
+/// **** BODY FONT STYLES **** ///
+
+$body-fs: (
+  base: $font-size-base,        // 16px
+  main: $font-size-main         // 18px
+)!default;
+  
+  
+@mixin body-base{
+  font-family: $font-family-sans-serif;
+  font-size: map-get($body-fs, main);
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $body-color;
+}
+
+
+@mixin body($style) {
+  @if $style == "main" {
+    @include body-base;
+  }
+
+  @else if $style == "bold" {
+    @include body-base;
+    font-weight:$font-weight-bold;
+  }
+
+  @else if $style == "bold-purple" {
+    @include body-base;
+    font-weight:$font-weight-bold;
+    color: $link-color;
+  }
+
+  @else if $style == "-white" {
+    @include body-base;
+    color: $body-color-white;
+  }
+
+  @else if $style == "link" {
+    @include body-base;
+    font-weight:$font-weight-bold;
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+}
+
+// ===== Usage ===== //
+
+.body--main{
+  @include body(main);
+}
+
+.body--bold{
+  @include body(bold);
+}
+
+.body--link{
+  @include body(link);
+}
+
+.body--purple{
+  @include body(bold-purple);
+}
+
+.body--white{
+  @include body(-white);
+}
+

@@ -1,0 +1,73 @@
+/// **** FONT VARIABLES **** ///
+
+//Font family
+$font-family-sans-serif: 'Inter', sans-serif !default;
+
+//Body Font Sizes
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-main:                $font-size-base * 1.125;  // 18px
+
+//Body Line Heights
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+
+
+//Heading Font Sizes
+$h1-font-size:                3.5rem;              //   56px
+$h2-font-size:                2.25rem;             //   36px
+$h3-font-size:                1.25rem;              //  20px
+
+
+//Heading Line Heights - All divisible by 8 for vertical Rhythm
+$h1-line-height:                4.5rem;              //  72px
+$h2-line-height:                2.5rem;               //  40px
+$h3-line-height:                1.5rem;               //  24px
+
+//Font Weights
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+$font-weight-base:            $font-weight-normal;
+
+
+
+/// **** COLORS VARIABLES  **** ///
+
+// Descriptive naming
+$color-black:#000000;
+$color-white:#FFFFFF;
+$color-fantasy:#FBF8F3;
+$color-persian-blue:#4D13D1;
+$color-emperor:#4F4F4F;
+$color-alto:#DADADA;
+$color-hawkes-blue: #E5DDFD;
+$color-silver-chalice: #A9A9A9;
+
+
+
+
+// Functional naming
+$button-main-bg-color:$color-persian-blue;
+$link-color:$color-persian-blue;
+$sign-up-background-color:$color-persian-blue;
+$cta-bg-color: $color-persian-blue;
+$button-main-color:$color-white;
+$body-color-white:$color-white;
+$heading-color--white:$color-white;
+$background-color:$color-fantasy;
+$sign-up-description-txt:$color-hawkes-blue;
+$heading-color: $color-black;
+$logo-color: $color-black;
+$mobile-nav-icon:$color-emperor;
+$body-color: $color-emperor;
+$border-color:$color-alto;
+$button-second-bg-color:$color-white;
+$button-second-txt-color:$color-persian-blue;
+$button-third-bg-color:$color-white;
+$button-third-txt-color:$color-persian-blue;
+
+
+
+

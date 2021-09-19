@@ -1,0 +1,123 @@
+.header{
+   background-color: $background-color;
+   padding-bottom: 10.5rem;
+   margin-bottom: 5rem;
+}
+
+
+.hero{
+    &__container{
+        @include flex-center-vert;
+
+        @include respond-to(md){
+            @include flex-center-column;
+            flex-direction: column-reverse;
+        }
+
+    }
+
+    &__txt-box{
+        width: 250%;  
+        
+        @include respond-to(md){
+            width: 100%;  
+        }
+    }
+
+    &__img-box{
+        @include respond-to(md){
+            margin-bottom: 4rem;
+        }
+        
+    }
+
+    &__heading{
+        margin-bottom: .5rem;
+
+        @include respond-to(xs){
+            @include heading(second);
+            color: $heading-color;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__description{
+        margin-bottom: 1.5rem;
+    }
+
+    &__cta{
+        margin-bottom: 2.25rem;
+
+        @include respond-to(md){
+            @include flex-center-column;
+        }
+    }
+
+    &__btn{
+        @include respond-to(md){
+            @include full-width-button;
+        }
+    }
+
+
+    &__link{
+        margin-left: 2.25rem;
+
+        @include respond-to(md){
+            margin-left: 0rem;
+            padding-top: 1rem;
+        }
+    }
+
+    &__stats{
+        list-style: none;
+        @include flex-center-vert;
+
+        @include respond-to(xs){
+            @include flex-column;
+            align-items: flex-start;
+        }
+    }
+
+    &__stats-item{
+        padding-left: 2rem;
+        background-image: url(/Assets/Checkmark.svg);
+        background-position: 0 0;
+        background-size: 1.5rem 1.5rem;
+        background-repeat: no-repeat;
+
+        @include respond-to(xs){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__stats-item:last-child{
+        margin-left: 1rem;
+
+        @include respond-to(xs){
+            margin-left: 0rem;
+        }
+    }
+}
+
+
+
+.rating{
+    display: flex;
+    margin-bottom: 1rem;
+    @include respond-to(md){
+        display: none;
+    }
+
+    &__star-container{
+        display: flex;
+    }
+
+    &__star{
+        margin-right: 0.5rem;
+    }
+
+    &__star:nth-child(5){
+        margin-right: 0.5rem;
+    }
+}
