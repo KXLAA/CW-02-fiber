@@ -79,24 +79,17 @@
         }
     }
 
-    &__stats-item{
-        padding-left: 2rem;
-        background-image: url("Assets/Checkmark.svg");
-        background-position: 0 0;
-        background-size: 1.5rem 1.5rem;
-        background-repeat: no-repeat;
+    &__stats-box{
+        @include flex-center-vert;
+        margin-right: 1.5rem;
 
         @include respond-to(xs){
             margin-bottom: 1rem;
         }
     }
 
-    &__stats-item:last-child{
-        margin-left: 1rem;
-
-        @include respond-to(xs){
-            margin-left: 0rem;
-        }
+    &__stats-img{
+        margin-right: 1rem;
     }
 }
 
