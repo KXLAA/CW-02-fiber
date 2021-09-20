@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/KXLAA/CW-01-communie-waitlist)
-- Live Site URL: [Live Preview](https://kxlaa.github.io/CW-01-communie-waitlist/)
+- Solution URL: [Github Repo](https://github.com/KXLAA/CW-02-fiber)
+- Live Site URL: [Live Preview](https://kxlaa.github.io/CW-02-fiber/)
 
 ## My process
 
