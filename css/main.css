@@ -304,6 +304,8 @@ select {
 @media screen and (max-width: 62rem) {
   .nav__main {
     background-color: rgba(255, 255, 255, 0.97);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;
@@ -417,6 +419,8 @@ select {
 
 .nav-open .mobile-nav__icon[name=close-sharp] {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-open .mobile-nav__icon[name=menu-sharp] {
@@ -766,6 +770,8 @@ select {
 
 .sign-up__container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   justify-content: space-between;
 }
 .sign-up__form-container {
@@ -832,7 +838,7 @@ select {
 }
 .form__heading {
   margin-bottom: 0.5rem;
-  color: black;
+  color: #000000;
 }
 .form__input-field {
   border: 0.0625rem solid #dadada;
@@ -842,6 +848,9 @@ select {
   padding-top: 1.1875rem;
   padding-bottom: 1.1875rem;
   margin-bottom: 2rem;
+}
+.form__input-field:focus {
+  background-color: #dcdae4;
 }
 .form__checkbox-container {
   margin-bottom: 1.5rem;
